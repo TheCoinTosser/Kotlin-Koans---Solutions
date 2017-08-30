@@ -5,6 +5,11 @@ import org.junit.Assert.assertTrue
 import org.junit.Test
 
 class N04LambdasKtTest {
+
+	@Test fun emptyList() {
+		assertFalse(task4(listOf()))
+	}
+
     @Test fun contains() {
         assertTrue(task4(listOf(1, 2, 3)))
     }
