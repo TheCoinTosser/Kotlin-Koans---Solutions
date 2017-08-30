@@ -12,7 +12,21 @@ fun todoTask1(collection: Collection<Int>): Nothing = TODO(
     """,
     references = { JavaCode1().task1(collection) })
 
-
 fun task1(collection: Collection<Int>): String {
-    todoTask1(collection)
+
+    val sb = StringBuilder("{")
+
+	collection.forEachIndexed{ index, value ->
+
+		sb.append(value)
+
+		if(index < collection.size - 1){
+			sb.append(", ")
+		}
+	}
+
+
+	sb.append("}")
+
+    return sb.toString()
 }
