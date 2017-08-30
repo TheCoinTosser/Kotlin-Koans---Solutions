@@ -17,7 +17,20 @@ fun todoTask10(): Nothing = TODO(
 )
 
 fun task10(): List<Int> {
+
     val arrayList = arrayListOf(1, 5, 2)
-    Collections.sort(arrayList, todoTask10())
+    Collections.sort(arrayList, object: Comparator<Int>{
+
+		//Check out the original solution. It is cleverer than this! =)
+		override fun compare(n1: Int,
+							 n2: Int): Int {
+
+            if(n1 > n2) return -1
+            if(n1 < n2) return 1
+
+            return 0
+		}
+	})
+
     return arrayList
 }
