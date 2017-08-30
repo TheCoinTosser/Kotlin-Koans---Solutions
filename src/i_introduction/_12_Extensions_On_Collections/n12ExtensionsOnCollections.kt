@@ -17,7 +17,8 @@ fun todoTask12(): Nothing = TODO(
 )
 
 fun task12(): List<Int> {
-    todoTask12()
-    return arrayListOf(1, 5, 2)
+
+    //arrayListOf() returns an ArrayList, which is mutable. We must use listOf() if we want immutable lists
+    return listOf(1, 5, 2).sortedDescending()
 }
 
