@@ -32,9 +32,11 @@ fun todoTask28(): Nothing = TODO(
     references = { date: MyDate -> DateRange(date, date.nextDay()) })
 
 
-fun iterateOverDateRange(firstDate: MyDate, secondDate: MyDate, handler: (MyDate) -> Unit) {
-    todoTask28()
-//    for (date in firstDate..secondDate) {
-//        handler(date)
-//    }
+fun iterateOverDateRange(firstDate: MyDate,
+                         secondDate: MyDate,
+                         handler: (MyDate) -> Unit) {
+
+    for (date in firstDate..secondDate) {
+        handler(date)
+    }
 }
