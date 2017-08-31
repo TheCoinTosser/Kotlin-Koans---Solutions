@@ -16,6 +16,12 @@ class N25ComparisonKtTest {
         assertTrue("The date ${first.s} should be before ${second.s}", first < second)
     }
 
+	@Test fun testBefore2() {
+		val first = MyDate(2013, 8, 12)
+		val second = MyDate(2014, 7, 11)
+		assertTrue("The date ${first.s} should be before ${second.s}", first < second)
+	}
+
     @Test fun testAfter() {
         val first = MyDate(2014, 10, 20)
         val second = MyDate(2014, 7, 11)
