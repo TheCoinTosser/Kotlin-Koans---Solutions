@@ -13,7 +13,7 @@ data class MyDate(val year: Int,
 	}
 }
 
-operator fun MyDate.rangeTo(other: MyDate): DateRange = todoTask27()
+operator fun MyDate.rangeTo(other: MyDate) = DateRange(this, other)
 
 enum class TimeInterval {
     DAY,
