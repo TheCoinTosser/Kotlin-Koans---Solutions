@@ -4,6 +4,7 @@ import org.junit.Assert.assertEquals
 import org.junit.Test
 
 class N32PropertiesKtTest {
+
     @Test fun testPropertyWithCounter() {
         val q = PropertyExample()
         q.propertyWithCounter = 14
@@ -15,4 +16,10 @@ class N32PropertiesKtTest {
         assertEquals("The property q.propertyWithCounter should be set:", 32, q.propertyWithCounter!!)
     }
 
+	@Test fun testPropertyWithCounter0() {
+
+		val q = PropertyExample()
+		assertEquals("The property q.counter should contain the number of assignments to q.propertyWithCounter:",
+					 0, q.counter)
+	}
 }
